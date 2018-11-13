@@ -1,9 +1,9 @@
 # slate-code-block
 
-[![NPM version](https://badge.fury.io/js/slate-edit-code.svg)](http://badge.fury.io/js/slate-edit-code)
-[![Linux Build Status](https://travis-ci.org/GitbookIO/slate-edit-code.png?branch=master)](https://travis-ci.org/GitbookIO/slate-edit-code)
+[![NPM version](https://badge.fury.io/js/slate-code-block.svg)](http://badge.fury.io/js/slate-code-block)
+[![Linux Build Status](https://travis-ci.org/linonetwo/slate-code-block.png?branch=master)](https://travis-ci.org/linonetwo/slate-code-block)
 
-A Slate plugin to handle code block editing. This is a fork from GitbookIO/slate-edit-code, [see why](https://github.com/GitbookIO/slate/blob/master/Readme.md).
+A Slate plugin to handle code block editing. This is a fork from linonetwo/slate-code-block, [see why](https://github.com/GitbookIO/slate/blob/master/Readme.md).
 
 ### Install
 
@@ -34,15 +34,12 @@ This plugin uses the following structure for code blocks:
 
 Texts inside `code_blocks` that contain newlines `\n` are automatically split into the appropriate number of `code_lines`.
 
-
 ### Simple Usage
 
 ```js
-import CodeBlock from 'slate-code-block'
+import CodeBlock from 'slate-code-block';
 
-const plugins = [
-  CodeBlock()
-]
+const plugins = [CodeBlock()];
 ```
 
 #### Options arguments
@@ -52,12 +49,12 @@ const plugins = [
 - `exitBlockType = 'paragraph' : null | string` — <kbd>Mod+Enter</kbd> will exit the code container, into the given block type. Backspace at start of an empty code container will convert it to the given block type. Pass `null` to disable this behavior.
 - `onExit: (Change) => void | Change` — Change to do when the user hits <kbd>Mod+Enter</kbd>. Defaults to exiting the code block, into a new `exitBlockType` block.
 - `selectAll = true : boolean` — True to select all code inside a code container on <kbd>Mod+A</kbd>
-- `allowMarks = false : boolean` —  False disallow marks in code blocks by normalizing them away.
+- `allowMarks = false : boolean` — False disallow marks in code blocks by normalizing them away.
 - `getIndent: (Value) => string` — Returns the indent unit as a string. The current value is passed as context.
 
 #### Suppressing onKeyDown behavior
 
-Some behavior implemented by this plugins have no corresponding option. While there is an option `selectAll` to disable the behavior on `Mod+A`,  If you would like to fine tune these behavior, you can always redefine the exported `onKeyDown` function.
+Some behavior implemented by this plugins have no corresponding option. While there is an option `selectAll` to disable the behavior on `Mod+A`, If you would like to fine tune these behavior, you can always redefine the exported `onKeyDown` function.
 
 The following example disable all indent behavior
 
@@ -87,11 +84,11 @@ const customPlugin = {
 
 `slate-code-block` exports utilities, accessible like so:
 
-``` js
-const plugin = CodeBlock()
+```js
+const plugin = CodeBlock();
 
 // Access exported utilities there
-plugin.utils
+plugin.utils;
 ```
 
 #### `utils.deserializeCode`
@@ -99,7 +96,6 @@ plugin.utils
 `plugin.utils.deserializeCode(text: String) => Block`
 
 Split a text string into lines, and deserialize them to a `code_container` `Block`, with one children `code_line` `Block` per line.
-
 
 #### `changes.toggleCodeBlock`
 
@@ -120,6 +116,7 @@ Convert a block (paragraph, etc) into a code block.
 Convert current block (paragraph, etc) into a code block.
 
 #### `changes.unwrapCodeBlockByKey`
+
 `plugin.changes.unwrapCodeBlockByKey(change: Change, key: String, type: String) => Change`
 
 Convert a code block into a normal block (paragraph, etc).
