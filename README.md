@@ -3,12 +3,12 @@
 [![NPM version](https://badge.fury.io/js/slate-edit-code.svg)](http://badge.fury.io/js/slate-edit-code)
 [![Linux Build Status](https://travis-ci.org/GitbookIO/slate-edit-code.png?branch=master)](https://travis-ci.org/GitbookIO/slate-edit-code)
 
-A Slate plugin to handle code block editing.
+A Slate plugin to handle code block editing. This is a fork from GitbookIO/slate-edit-code, [see why](https://github.com/GitbookIO/slate/blob/master/Readme.md).
 
 ### Install
 
 ```js
-npm install slate-edit-code
+npm install @linonetwo012/slate-edit-code
 ```
 
 ### Features

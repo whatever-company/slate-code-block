@@ -1,9 +1,9 @@
 {
   "name": "slate-edit-code",
-  "description": "A Slate plugin to handle code blocks editing.",
+  "description": "A Slate plugin to handle code blocks editing. Fork from GitbookIO/slate-edit-code",
   "version": "0.15.5",
   "license": "Apache-2.0",
-  "repository": "git://github.com/GitbookIO/slate-edit-code.git",
+  "repository": "git://github.com/linonetwo/slate-edit-code.git",
   "main": "./dist/index.js",
   "dependencies": {
     "detect-indent": "^5.0.0",
