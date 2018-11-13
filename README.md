@@ -1,4 +1,4 @@
-# slate-edit-code
+# slate-code-block
 
 [![NPM version](https://badge.fury.io/js/slate-edit-code.svg)](http://badge.fury.io/js/slate-edit-code)
 [![Linux Build Status](https://travis-ci.org/GitbookIO/slate-edit-code.png?branch=master)](https://travis-ci.org/GitbookIO/slate-edit-code)
@@ -8,7 +8,7 @@ A Slate plugin to handle code block editing. This is a fork from GitbookIO/slate
 ### Install
 
 ```js
-npm install @linonetwo012/slate-edit-code
+npm install slate-code-block
 ```
 
 ### Features
@@ -38,10 +38,10 @@ Texts inside `code_blocks` that contain newlines `\n` are automatically split in
 ### Simple Usage
 
 ```js
-import EditCode from 'slate-edit-code'
+import CodeBlock from 'slate-code-block'
 
 const plugins = [
-  EditCode()
+  CodeBlock()
 ]
 ```
 
@@ -62,11 +62,11 @@ Some behavior implemented by this plugins have no corresponding option. While th
 The following example disable all indent behavior
 
 ```js
-import EditCode from 'slate-edit-code'
+import CodeBlock from 'slate-code-block'
 
 const options = { ... };
 
-const basePlugin = EditCode(options);
+const basePlugin = CodeBlock(options);
 
 const customPlugin = {
   ...basePlugin,
@@ -85,10 +85,10 @@ const customPlugin = {
 
 ### Utilities and Changes
 
-`slate-edit-code` exports utilities, accessible like so:
+`slate-code-block` exports utilities, accessible like so:
 
 ``` js
-const plugin = EditCode()
+const plugin = CodeBlock()
 
 // Access exported utilities there
 plugin.utils
