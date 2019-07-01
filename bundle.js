@@ -648,7 +648,6 @@ function onArrow(opts, event, editor, next) {
   var nextBlock = document.getNextBlock(currentLine.key);
   var prevBlock = document.getPreviousBlock(currentLine.key);
   if (isArrowUp(event) && currentLine.type === opts.lineType && !prevBlock) {
-    console.log('plugin arrow up');
     event.preventDefault();
     editor.moveToStartOfDocument().splitBlock(10).setBlocks({
       type: opts.exitBlockType,
@@ -658,7 +657,6 @@ function onArrow(opts, event, editor, next) {
     editor.moveToStartOfDocument();
     return (0, _changes.unwrapCodeBlock)(opts, editor, opts.exitBlockType);
   } else if (isArrowDown(event) && currentLine.type === opts.lineType && !nextBlock) {
-    console.log('plugin arrow down');
     event.preventDefault();
     return opts.resolvedOnExit(editor);
   }
