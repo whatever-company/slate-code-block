@@ -2,12 +2,12 @@
 
 A Slate plugin to handle code block editing.
 
-This is a fork from linonetwo/slate-code-block, which is a fork from GitbookIO/slate-edit-code, ([because](https://github.com/GitbookIO/slate/blob/master/Readme.md)) for compatibility with latest Slate.
+This is a fork from tildepage/slate-code-block, which is a fork from linonetwo/slate-code-block, which is a fork from GitbookIO/slate-edit-code, ([because](https://github.com/GitbookIO/slate/blob/master/Readme.md)) for compatibility with latest Slate.
 
 ### Install
 
 ```js
-yarn add @tildepage/slate-code-block
+yarn add @rocketscience/slate-code-block
 ```
 
 ### Features

@@ -28,6 +28,10 @@ const value = (
                 <code_line>{'}'}</code_line>
             </code_block>
             <paragraph>End paragraph</paragraph>
+
+            <paragraph>for multiline 1</paragraph>
+            <paragraph>for multiline 2</paragraph>
+            <paragraph>for multiline 3</paragraph>
         </document>
     </value>
 );

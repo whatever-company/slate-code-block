@@ -1,76 +1,62 @@
 // @flow
 /* eslint-disable import/no-extraneous-dependencies */
 /* global document */
-import * as React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Editor } from 'slate-react';
 import PluginEditCode from '../lib/';
 
 import INITIAL_VALUE from './value';
+import renderBlock from './renderBlock';
 
 const plugin = PluginEditCode();
 const plugins = [plugin];
 
-function renderNode(props: *) {
-    const { node, children, attributes } = props;
-
-    switch (node.type) {
-        case 'code_block':
-            return (
-                <div className="code" {...attributes}>
-                    {children}
-                </div>
-            );
-        case 'code_line':
-            return <pre {...attributes}>{children}</pre>;
-        case 'paragraph':
-            return <p {...attributes}>{children}</p>;
-        case 'heading':
-            return <h1 {...attributes}>{children}</h1>;
-        default:
-            return null;
-    }
-}
 
 class Example extends React.Component<*, *> {
-    state = {
-        value: INITIAL_VALUE
-    };
+  state = {
+    value: INITIAL_VALUE
+  };
 
-    onChange = ({ value }) => {
-        this.setState({
-            value
-        });
-    };
+  ref = editor => {
+    this.editor = editor
+  }
 
-    onToggleCode = () => {
-        const { value } = this.state;
+  onChange = ({ value }) => {
+    this.setState({
+      value
+    });
+  };
 
-        this.onChange(
-            plugin.changes.toggleCodeBlock(value.change(), 'paragraph').focus()
-        );
-    };
+  onToggleCode = () => {
+    const { value } = this.state;
 
-    render() {
-        const { value } = this.state;
+    this.onChange(
+      plugin.changes.toggleCodeBlock(this.editor, 'paragraph').focus()
+    );
+  };
 
-        return (
-            <div>
-                <button onClick={this.onToggleCode}>
-                    {plugin.utils.isInCodeBlock(value)
-                        ? 'Paragraph'
-                        : 'Code Block'}
-                </button>
-                <Editor
-                    placeholder={'Enter some text...'}
-                    plugins={plugins}
-                    value={value}
-                    onChange={this.onChange}
-                    renderNode={renderNode}
-                />
-            </div>
-        );
-    }
+  render() {
+    const { value } = this.state;
+
+    return (
+      <div>
+        <button onClick={this.onToggleCode}>
+          {plugin.utils.isInCodeBlock(value)
+              ? 'Paragraph'
+              : 'Code Block'}
+        </button>
+        <Editor
+          placeholder={'Enter some text...'}
+          plugins={plugins}
+          value={value}
+          ref={this.ref}
+          onChange={this.onChange}
+          renderBlock={renderBlock}
+        />
+      </div>
+    );
+  }
 }
 
 // $FlowFixMe
