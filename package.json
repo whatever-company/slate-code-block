@@ -1,7 +1,7 @@
 {
   "name": "@eliumhq/slate-code-block",
   "description": "A Slate plugin to handle code blocks editing. Fork from GitbookIO/slate-edit-code",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "Apache-2.0",
   "repository": "git@github.com:whatever-company/slate-code-block.git",
   "main": "./dist/index.js",
@@ -52,7 +52,6 @@
     "prepublish": "babel ./lib --out-dir ./dist",
     "lint": "eslint ./",
     "test": "mocha --require @babel/register ./tests/all.js",
-    "postpublish": "npm run deploy-example",
     "build-example": "browserify ./example/main.js -o ./example/bundle.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] --plugins [ @babel/plugin-proposal-class-properties @babel/plugin-transform-flow-strip-types ] ] -d",
     "serve-example": "http-server ./example/ -p 8081 -c-1",
     "start": "npm run build-example && npm run serve-example",
