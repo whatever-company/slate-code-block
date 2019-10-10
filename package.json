@@ -1,9 +1,9 @@
 {
-  "name": "@rocketscience/slate-code-block",
+  "name": "@eliumhq/slate-code-block",
   "description": "A Slate plugin to handle code blocks editing. Fork from GitbookIO/slate-edit-code",
   "version": "0.2.0",
   "license": "Apache-2.0",
-  "repository": "git://github.com/glebtv/slate-code-block.git",
+  "repository": "git@github.com:whatever-company/slate-code-block.git",
   "main": "./dist/index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",

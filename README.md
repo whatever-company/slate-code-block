@@ -2,12 +2,12 @@
 
 A Slate plugin to handle code block editing.
 
-This is a fork from tildepage/slate-code-block, which is a fork from linonetwo/slate-code-block, which is a fork from GitbookIO/slate-edit-code, ([because](https://github.com/GitbookIO/slate/blob/master/Readme.md)) for compatibility with latest Slate.
+This is a fork from rocketscience/slate-code-block which is a fork of tildepage/slate-code-block, which is a fork from linonetwo/slate-code-block, which is a fork from GitbookIO/slate-edit-code, ([because](https://github.com/GitbookIO/slate/blob/master/Readme.md)) for compatibility with latest Slate.
 
 ### Install
 
 ```js
-yarn add @rocketscience/slate-code-block
+yarn add @eliumhq/slate-code-block
 ```
 
 ### Features
@@ -36,7 +36,7 @@ Texts inside `code_blocks` that contain newlines `\n` are automatically split in
 ### Simple Usage
 
 ```js
-import CodeBlock from 'slate-code-block';
+import CodeBlock from '@eliumhq/slate-code-block';
 
 const plugins = [CodeBlock()];
 ```
@@ -79,49 +79,52 @@ const customPlugin = {
 // Use customPlugin later on
 ```
 
-### Utilities and Changes
+### Queries and Commands
 
-`slate-code-block` exports utilities, accessible like so:
+#### `editor.getCurrentIndent`
 
-```js
-const plugin = CodeBlock();
+`editor.getCurrentIndent() => String`
 
-// Access exported utilities there
-plugin.utils;
-```
+Returns the current indent detected.
 
-#### `utils.deserializeCode`
+#### `editor.deserializeCode`
 
-`plugin.utils.deserializeCode(text: String) => Block`
+`editor.deserializeCode(text: String) => Block`
 
 Split a text string into lines, and deserialize them to a `code_container` `Block`, with one children `code_line` `Block` per line.
 
-#### `changes.toggleCodeBlock`
+#### `editor.deserializeCode`
 
-`plugin.changes.toggleCodeBlock(change: Change, type: String) => Change`
+`editor.deserializeCode(text: String) => Block`
+
+Split a text string into lines, and deserialize them to a `code_container` `Block`, with one children `code_line` `Block` per line.
+
+#### `editor.toggleCodeBlock`
+
+`editor.toggleCodeBlock(type: String) => Editor`
 
 Toggle a block into a code block or a normal block (defined by `type`).
 
-#### `changes.wrapCodeBlockByKey`
+#### `editor.wrapCodeBlockByKey`
 
-`plugin.changes.wrapCodeBlockByKey(change: Change, key: String) => Change`
+`editor.wrapCodeBlockByKey(key: String) => Editor`
 
 Convert a block (paragraph, etc) into a code block.
 
-#### `changes.wrapCodeBlock`
+#### `editor.wrapCodeBlock`
 
-`plugin.changes.wrapCodeBlock(change: Change) => Change`
+`editor.wrapCodeBlock() => Editor`
 
 Convert current block (paragraph, etc) into a code block.
 
-#### `changes.unwrapCodeBlockByKey`
+#### `editor.unwrapCodeBlockByKey`
 
-`plugin.changes.unwrapCodeBlockByKey(change: Change, key: String, type: String) => Change`
+`editor.unwrapCodeBlockByKey(key: String, type: String) => Editor`
 
 Convert a code block into a normal block (paragraph, etc).
 
-#### `changes.unwrapCodeBlock`
+#### `editor.unwrapCodeBlock`
 
-`plugin.changes.unwrapCodeBlock(change: Change, type: String) => Change`
+`editor.unwrapCodeBlock(type: String) => Editor`
 
 Convert current code block into a normal block (paragraph, etc).

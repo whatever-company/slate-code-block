@@ -8,6 +8,7 @@ import PluginEditCode from '../lib/';
 
 import INITIAL_VALUE from './value';
 import renderBlock from './renderBlock';
+import { threadId } from 'worker_threads';
 
 const plugin = PluginEditCode();
 const plugins = [plugin];
@@ -30,10 +31,7 @@ class Example extends React.Component<*, *> {
 
   onToggleCode = () => {
     const { value } = this.state;
-
-    this.onChange(
-      plugin.changes.toggleCodeBlock(this.editor, 'paragraph').focus()
-    );
+    this.editor.toggleCodeBlock('paragraph').focus()
   };
 
   render() {
@@ -42,7 +40,7 @@ class Example extends React.Component<*, *> {
     return (
       <div>
         <button onClick={this.onToggleCode}>
-          {plugin.utils.isInCodeBlock(value)
+          {this.editor && this.editor.isInCodeBlock()
               ? 'Paragraph'
               : 'Code Block'}
         </button>
