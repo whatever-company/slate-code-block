@@ -7,10 +7,7 @@
         "no-param-reassign": 1,
         "import/no-commonjs": 2
     },
-    "plugins": [
-        "flowtype"
-    ],
     "env": {
         "mocha": true
-    },
+    }
 }

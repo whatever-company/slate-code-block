@@ -1,5 +1,4 @@
 /** @jsx h */
-// @flow
 // eslint-disable-next-line
 import { createHyperscript } from 'slate-hyperscript';
 

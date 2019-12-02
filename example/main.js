@@ -1,4 +1,3 @@
-// @flow
 /* eslint-disable import/no-extraneous-dependencies */
 /* global document */
 import React from 'react';
@@ -57,5 +56,4 @@ class Example extends React.Component<*, *> {
   }
 }
 
-// $FlowFixMe
 ReactDOM.render(<Example />, document.getElementById('example'));
