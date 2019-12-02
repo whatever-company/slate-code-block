@@ -1,13 +1,12 @@
 /** @jsx hyperscript */
-/* eslint-disable react/void-dom-elements-no-children */
-import hyperscript from '../hyperscript';
+import hyperscript from '../hyperscript' // eslint-disable-line
 
 export default (
-    <value>
-        <document>
-            <paragraph>
+  <value>
+    <document>
+      <paragraph>
                 Hello <link>world</link>
-            </paragraph>
-        </document>
-    </value>
-);
+      </paragraph>
+    </document>
+  </value>
+)

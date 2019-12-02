@@ -1,19 +1,19 @@
 /** @jsx hyperscript */
-import hyperscript from '../hyperscript';
+import hyperscript from '../hyperscript' // eslint-disable-line
 
 export default (
-    <value>
-        <document>
-            <code_block>
-                <code_line>
-                    <text />
-                </code_line>
-                <code_line>Hello</code_line>
-                <code_line>invalid</code_line>
-                <code_line>World</code_line>
-                <code_line>invalid</code_line>
-                <code_line> again</code_line>
-            </code_block>
-        </document>
-    </value>
-);
+  <value>
+    <document>
+      <code_block>
+        <code_line>
+          <text />
+        </code_line>
+        <code_line>Hello</code_line>
+        <code_line>invalid</code_line>
+        <code_line>World</code_line>
+        <code_line>invalid</code_line>
+        <code_line> again</code_line>
+      </code_block>
+    </document>
+  </value>
+)

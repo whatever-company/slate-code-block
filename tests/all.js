@@ -9,13 +9,13 @@ import EditCode from '../lib'
 
 const PLUGIN = EditCode()
 
-function deserializeValue(value) {
+function deserializeValue (value) {
   return new Slate.Editor({
     plugins: [PLUGIN],
     value: Slate.Value.fromJSON({
       selection: value.selection,
-      document: value.document,
-    }),
+      document: value.document
+    })
   })
 }
 
@@ -39,7 +39,7 @@ describe('slate-edit-code', () => {
 
       if (expected) {
         const newDoc = hyperprint(newChange.value.document, {
-          strict: true,
+          strict: true
         })
         expect(newDoc).toEqual(hyperprint(expected.document, { strict: true }))
       }

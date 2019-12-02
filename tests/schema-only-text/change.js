@@ -1,6 +1,6 @@
-import Slate from 'slate';
-import { Editor } from 'slate-react';
+import Slate from 'slate'
+import { Editor } from 'slate-react'
 
-export default function(plugin, editor) {
-    return editor.normalize();
+export default function (plugin, editor) {
+  return editor.normalize()
 }

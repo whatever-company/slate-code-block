@@ -5,15 +5,15 @@ const h = createHyperscript({
     code_block: 'code_block',
     code_line: 'code_line',
     paragraph: 'paragraph',
-    default: 'default',
+    default: 'default'
   },
   inlines: {
     link: 'link',
-    'unknown-inline': 'unknown-inline',
+    'unknown-inline': 'unknown-inline'
   },
   marks: {
-    italic: 'italic',
-  },
+    italic: 'italic'
+  }
 })
 
 export default h

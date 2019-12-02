@@ -1,17 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* global document */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Editor } from 'slate-react';
-import PluginEditCode from '../lib/';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Editor } from 'slate-react'
+import PluginEditCode from '../lib/'
 
-import INITIAL_VALUE from './value';
-import renderBlock from './renderBlock';
-import { threadId } from 'worker_threads';
+import INITIAL_VALUE from './value'
+import renderBlock from './renderBlock'
+import { threadId } from 'worker_threads'
 
-const plugin = PluginEditCode();
-const plugins = [plugin];
-
+const plugin = PluginEditCode()
+const plugins = [plugin]
 
 class Example extends React.Component<*, *> {
   state = {
@@ -25,23 +24,23 @@ class Example extends React.Component<*, *> {
   onChange = ({ value }) => {
     this.setState({
       value
-    });
+    })
   };
 
   onToggleCode = () => {
-    const { value } = this.state;
+    const { value } = this.state
     this.editor.toggleCodeBlock('paragraph').focus()
   };
 
-  render() {
-    const { value } = this.state;
+  render () {
+    const { value } = this.state
 
     return (
       <div>
         <button onClick={this.onToggleCode}>
           {this.editor && this.editor.isInCodeBlock()
-              ? 'Paragraph'
-              : 'Code Block'}
+            ? 'Paragraph'
+            : 'Code Block'}
         </button>
         <Editor
           placeholder={'Enter some text...'}
@@ -52,8 +51,8 @@ class Example extends React.Component<*, *> {
           renderBlock={renderBlock}
         />
       </div>
-    );
+    )
   }
 }
 
-ReactDOM.render(<Example />, document.getElementById('example'));
+ReactDOM.render(<Example />, document.getElementById('example'))

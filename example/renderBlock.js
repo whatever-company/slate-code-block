@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-export default function renderBlock(props: *) {
-  const { node, children, attributes } = props;
+export default function renderBlock (props: *) {
+  const { node, children, attributes } = props
 
   switch (node.type) {
     case 'code_block':
@@ -9,15 +9,14 @@ export default function renderBlock(props: *) {
         <div className="code" {...attributes}>
           {children}
         </div>
-      );
+      )
     case 'code_line':
-      return <pre {...attributes}>{children}</pre>;
+      return <pre {...attributes}>{children}</pre>
     case 'paragraph':
-      return <p {...attributes}>{children}</p>;
+      return <p {...attributes}>{children}</p>
     case 'heading':
-      return <h1 {...attributes}>{children}</h1>;
+      return <h1 {...attributes}>{children}</h1>
     default:
-      return null;
+      return null
   }
 }
-
