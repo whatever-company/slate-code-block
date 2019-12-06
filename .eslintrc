@@ -1,13 +1,12 @@
 {
-    "parser": "babel-eslint",
-    "extends": [
-        "standard"
-    ],
-    "rules": {
-        "no-param-reassign": 1,
-        "import/no-commonjs": 2
-    },
-    "env": {
-        "mocha": true
-    }
+  "parser": "babel-eslint",
+  "extends": ["standard"],
+  "rules": {
+    "no-param-reassign": 1,
+    "import/no-commonjs": 2,
+    "space-before-function-paren": 0
+  },
+  "env": {
+    "mocha": true
+  }
 }

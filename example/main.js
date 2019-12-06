@@ -7,15 +7,14 @@ import PluginEditCode from '../lib/'
 
 import INITIAL_VALUE from './value'
 import renderBlock from './renderBlock'
-import { threadId } from 'worker_threads'
 
 const plugin = PluginEditCode()
 const plugins = [plugin]
 
-class Example extends React.Component<*, *> {
+class Example extends React.Component {
   state = {
     value: INITIAL_VALUE
-  };
+  }
 
   ref = editor => {
     this.editor = editor
@@ -25,14 +24,14 @@ class Example extends React.Component<*, *> {
     this.setState({
       value
     })
-  };
+  }
 
   onToggleCode = () => {
     const { value } = this.state
     this.editor.toggleCodeBlock('paragraph').focus()
-  };
+  }
 
-  render () {
+  render() {
     const { value } = this.state
 
     return (

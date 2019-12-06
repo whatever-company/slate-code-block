@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function renderBlock (props: *) {
+export default function renderBlock(props) {
   const { node, children, attributes } = props
 
   switch (node.type) {
     case 'code_block':
       return (
-        <div className="code" {...attributes}>
+        <div className='code' {...attributes}>
           {children}
         </div>
       )
