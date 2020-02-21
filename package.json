@@ -1,7 +1,7 @@
 {
   "name": "@whatever-company/slate-code-block",
   "description": "A Slate plugin to handle code blocks editing. Fork from GitbookIO/slate-edit-code",
-  "version": "0.3.3",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": "git@github.com:whatever-company/slate-code-block.git",
   "main": "./dist/index.js",
