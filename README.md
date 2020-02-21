@@ -7,7 +7,7 @@ This is a fork from rocketscience/slate-code-block which is a fork of tildepage/
 ### Install
 
 ```js
-yarn add @eliumhq/slate-code-block
+yarn add @whatever-company/slate-code-block
 ```
 
 ### Features
@@ -36,9 +36,9 @@ Texts inside `code_blocks` that contain newlines `\n` are automatically split in
 ### Simple Usage
 
 ```js
-import CodeBlock from '@eliumhq/slate-code-block';
+import CodeBlock from '@whatever-company/slate-code-block'
 
-const plugins = [CodeBlock()];
+const plugins = [CodeBlock()]
 ```
 
 #### Options arguments
@@ -58,7 +58,7 @@ Some behavior implemented by this plugins have no corresponding option. While th
 The following example disable all indent behavior
 
 ```js
-import CodeBlock from 'slate-code-block'
+import CodeBlock from '@whatever-company/slate-code-block'
 
 const options = { ... };
 

@@ -1,0 +1,37 @@
+{
+  "extends": ["github>whatever-company/renovate-config"],
+  "automerge": true,
+  "gitLabAutomerge": true,
+  "prConcurrentLimit": 5,
+  "ignoreDeps": [
+    "slate",
+    "slate-hyperscript",
+    "slate-react",
+    "slate-html-serializer",
+    "slate-plain-serializer",
+    "slate-schema-violations"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": ["^@babel"],
+      "groupName": "Babel packages"
+    },
+    {
+      "packageNames": ["react", "react-dom", "react-test-renderer"],
+      "groupName": "React"
+    },
+    {
+      "packageNames": [
+        "react-relay",
+        "relay-compiler",
+        "relay-runtime",
+        "babel-plugin-relay"
+      ],
+      "groupName": "Relay"
+    },
+    {
+      "packageNames": ["debug"],
+      "allowedVersions": "<4"
+    }
+  ]
+}
