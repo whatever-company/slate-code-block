@@ -2844,11 +2844,6 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-ends-with@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ends-with/-/ends-with-1.0.1.tgz#5265697706c6ac5150d6649a89ec2d019c25af90"
-  integrity sha1-UmVpdwbGrFFQ1mSaiewtAZwlr5A=
-
 env-paths@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/env-paths/-/env-paths-1.0.0.tgz#4168133b42bb05c38a35b1ae4397c8298ab369e0"
