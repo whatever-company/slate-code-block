@@ -1,5 +1,5 @@
 /** @jsx hyperscript */
-import hyperscript from '../hyperscript' // eslint-disable-line
+import hyperscript from '../hyperscript.js' // eslint-disable-line
 
 export default (
   <value>

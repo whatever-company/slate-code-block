@@ -1,6 +1,6 @@
 /** @jsx hyperscript */
 import { Value } from 'slate'
-import hyperscript from '../hyperscript' // eslint-disable-line
+import hyperscript from '../hyperscript.js' // eslint-disable-line
 
 export default Value.fromJSON(
   {

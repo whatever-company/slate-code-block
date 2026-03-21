@@ -1,11 +1,16 @@
-/* eslint-disable global-require */
-/* eslint-disable import/no-dynamic-require */
-import expect from 'expect'
-import fs from 'fs'
-import path from 'path'
+import { describe, it } from 'node:test'
+import assert from 'node:assert/strict'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import Slate from 'slate'
-import hyperprint from '@zarv1k/slate-hyperprint'
-import EditCode from '../lib'
+import _hyperprint from '@zarv1k/slate-hyperprint'
+import _EditCode from '../lib/index.js'
+
+const hyperprint = _hyperprint.default || _hyperprint
+const EditCode = _EditCode.default || _EditCode
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const PLUGIN = EditCode()
 
@@ -20,29 +25,29 @@ function deserializeValue (value) {
 }
 
 describe('slate-edit-code', () => {
-  const tests = fs.readdirSync(__dirname)
+  const entries = fs.readdirSync(__dirname)
 
-  tests.forEach((test) => {
-    if (test[0] === '.' || path.extname(test).length > 0) return
+  for (const test of entries) {
+    if (test[0] === '.' || path.extname(test).length > 0) continue
 
-    it(test, () => {
+    it(test, async () => {
       Slate.KeyUtils.resetGenerator()
       const dir = path.resolve(__dirname, test)
-      const input = require(path.resolve(dir, 'input.js')).default
-      const expectedPath = path.resolve(dir, 'expected.js')
-      const expected =
-        fs.existsSync(expectedPath) && require(expectedPath).default
 
-      const runChange = require(path.resolve(dir, 'change.js')).default
+      const input = (await import(path.resolve(dir, 'input.js'))).default
+      const expectedPath = path.resolve(dir, 'expected.js')
+      const expected = fs.existsSync(expectedPath)
+        ? (await import(expectedPath)).default
+        : null
+
+      const runChange = (await import(path.resolve(dir, 'change.js'))).default
 
       const newChange = runChange(PLUGIN, deserializeValue(input))
 
       if (expected) {
-        const newDoc = hyperprint(newChange.value.document, {
-          strict: true
-        })
-        expect(newDoc).toEqual(hyperprint(expected.document, { strict: true }))
+        const newDoc = hyperprint(newChange.value.document, { strict: true })
+        assert.equal(newDoc, hyperprint(expected.document, { strict: true }))
       }
     })
-  })
+  }
 })
