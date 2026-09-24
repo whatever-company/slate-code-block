@@ -20,7 +20,6 @@
     "npm": ">=6.0.0"
   },
   "peerDependencies": {
-    "immutable": "^4.0.0-rc.12",
     "slate": "^0.47.3",
     "slate-react": "^0.22.4",
     "slate-schema-violations": "^0.1.39"
@@ -28,7 +27,7 @@
   "devDependencies": {
     "@zarv1k/slate-hyperprint": "^3.0.1",
     "esbuild": "^0.27.4",
-    "immutable": "^4.0.0-rc.12",
+    "immutable": "^3.8.2",
     "oxfmt": "^0.70.0",
     "oxlint": "^1.85.0",
     "react": "^16.12.0",
