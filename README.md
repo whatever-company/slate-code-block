@@ -128,3 +128,12 @@ Convert a code block into a normal block (paragraph, etc).
 `editor.unwrapCodeBlock(type: String) => Editor`
 
 Convert current code block into a normal block (paragraph, etc).
+
+### Release
+
+```sh
+pnpm version patch   # or minor / major
+git push --follow-tags
+```
+
+`pnpm version` bumps `package.json`, commits, and creates a `vX.Y.Z` tag. Pushing the tag triggers the CI publish job.
