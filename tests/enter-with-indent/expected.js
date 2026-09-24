@@ -8,11 +8,11 @@ export default (
         <code_line>Line 1</code_line>
         <code_line>
           {'    '}
-                    Li
+          Li
         </code_line>
         <code_line>
           {'    '}
-                    ne 2
+          ne 2
         </code_line>
       </code_block>
     </document>

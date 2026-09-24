@@ -7,7 +7,7 @@ export default (
       <code_block>
         <code_line>
           {'  '}
-                    Some code
+          Some code
         </code_line>
       </code_block>
     </document>

@@ -13,7 +13,7 @@ const plugins = [plugin]
 
 class Example extends React.Component {
   state = {
-    value: INITIAL_VALUE
+    value: INITIAL_VALUE,
   }
 
   ref = editor => {
@@ -22,7 +22,7 @@ class Example extends React.Component {
 
   onChange = ({ value }) => {
     this.setState({
-      value
+      value,
     })
   }
 

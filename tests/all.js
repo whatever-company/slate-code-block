@@ -14,13 +14,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const PLUGIN = EditCode()
 
-function deserializeValue (value) {
+function deserializeValue(value) {
   return new Slate.Editor({
     plugins: [PLUGIN],
     value: Slate.Value.fromJSON({
       selection: value.selection,
-      document: value.document
-    })
+      document: value.document,
+    }),
   })
 }
 

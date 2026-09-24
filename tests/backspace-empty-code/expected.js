@@ -5,7 +5,7 @@ export default (
   <value>
     <document>
       <paragraph>
-        <text/>
+        <text />
       </paragraph>
     </document>
   </value>

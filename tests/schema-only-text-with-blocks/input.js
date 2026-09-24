@@ -14,7 +14,7 @@ export default Value.fromJSON(
           </code_line>
         </code_block>
       </document>
-    )
+    ),
   },
-  { normalize: false }
+  { normalize: false },
 )
