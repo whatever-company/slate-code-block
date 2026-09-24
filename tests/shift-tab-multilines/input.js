@@ -8,17 +8,17 @@ export default (
         <code_line>
           <anchor />
           {'    '}
-                    Line 1
+          Line 1
         </code_line>
         <code_line>
           {'    '}
-                    Li
+          Li
           <focus />
-                    ne 2
+          ne 2
         </code_line>
         <code_line>
           {'    '}
-                    Line 3
+          Line 3
         </code_line>
       </code_block>
     </document>

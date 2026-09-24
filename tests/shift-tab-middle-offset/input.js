@@ -7,15 +7,15 @@ export default (
       <code_block>
         <code_line>
           {'  '}
-                    Line 1
+          Line 1
         </code_line>
         <code_line>
           {'  '}L<cursor />
-                    ine 2
+          ine 2
         </code_line>
         <code_line>
           {'  '}
-                    Line 3
+          Line 3
         </code_line>
       </code_block>
     </document>
