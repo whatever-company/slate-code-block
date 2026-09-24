@@ -1,9 +1,0 @@
-dist
-tests
-example
-.babelrc
-.eslintrc
-.eslintignore
-.prettierrc
-.travis.yml
-renovate.json
