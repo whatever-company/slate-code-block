@@ -10,8 +10,7 @@
   "types": "./index.ts",
   "files": [
     "lib",
-    "index.ts",
-    "CHANGELOG.md"
+    "index.ts"
   ],
   "dependencies": {
     "is-hotkey": "^0.1.3"
@@ -35,15 +34,13 @@
     "slate": "^0.47.4",
     "slate-hyperscript": "^0.13.3",
     "slate-react": "^0.22.4",
-    "slate-schema-violations": "^0.1.39",
-    "standard-version": "^7.1.0"
+    "slate-schema-violations": "^0.1.39"
   },
   "scripts": {
     "lint": "oxlint lib/",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
-    "test": "node --import ./tests/loader.js --test ./tests/all.js",
-    "release": "standard-version"
+    "test": "node --import ./tests/loader.js --test ./tests/all.js"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
