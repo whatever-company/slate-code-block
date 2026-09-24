@@ -7,10 +7,10 @@
   "type": "module",
   "packageManager": "pnpm@10.32.1",
   "main": "./lib/index.js",
-  "types": "./index.ts",
+  "types": "./index.d.ts",
   "files": [
     "lib",
-    "index.ts"
+    "index.d.ts"
   ],
   "dependencies": {
     "is-hotkey": "0.1.8"
@@ -24,6 +24,8 @@
     "slate-schema-violations": "^0.1.39"
   },
   "devDependencies": {
+    "@types/slate": "0.47.16",
+    "@types/slate-react": "0.22.9",
     "@zarv1k/slate-hyperprint": "3.2.0",
     "esbuild": "0.27.4",
     "immutable": "3.8.4",
@@ -34,10 +36,12 @@
     "slate": "0.47.9",
     "slate-hyperscript": "0.13.9",
     "slate-react": "0.22.10",
-    "slate-schema-violations": "0.1.39"
+    "slate-schema-violations": "0.1.39",
+    "typescript": "7.0.2"
   },
   "scripts": {
     "lint": "oxlint lib/",
+    "typecheck": "tsc -p tsconfig.json",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "test": "node --import ./tests/loader.js --test ./tests/all.js"
