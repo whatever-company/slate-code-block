@@ -6,7 +6,7 @@ export default (
     <document>
       <code_block>
         <code_line>
-                    Some <italic>formatted</italic> text
+          Some <italic>formatted</italic> text
         </code_line>
       </code_block>
     </document>

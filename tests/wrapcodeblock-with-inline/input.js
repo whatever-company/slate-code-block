@@ -5,7 +5,7 @@ export default (
   <value>
     <document>
       <paragraph>
-                Hello <link>world</link>
+        Hello <link>world</link>
       </paragraph>
     </document>
   </value>

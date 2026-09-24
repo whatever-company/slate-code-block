@@ -1,14 +1,14 @@
 /** @jsx h */
 // eslint-disable-next-line
-import { createHyperscript } from 'slate-hyperscript';
+import { createHyperscript } from 'slate-hyperscript'
 
 const h = createHyperscript({
   blocks: {
     heading: 'heading',
     paragraph: 'paragraph',
     code_block: 'code_block',
-    code_line: 'code_line'
-  }
+    code_line: 'code_line',
+  },
 })
 
 const value = (

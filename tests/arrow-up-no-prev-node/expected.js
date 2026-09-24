@@ -9,7 +9,10 @@ export default (
       </paragraph>
       <code_block>
         <code_line>
-          <text><cursor />Code</text>
+          <text>
+            <cursor />
+            Code
+          </text>
         </code_line>
       </code_block>
     </document>
